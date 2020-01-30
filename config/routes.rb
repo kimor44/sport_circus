@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :troops
+  resources :categories
+  resources :abouts
+  resources :infos
   resources :date_shows
   get 'sport_shows/index'
   get 'admin/index'
