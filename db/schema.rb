@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_30_154046) do
+ActiveRecord::Schema.define(version: 2020_01_30_160811) do
 
   create_table "abouts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "title"
@@ -57,9 +57,12 @@ ActiveRecord::Schema.define(version: 2020_01_30_154046) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "category_id"
+    t.bigint "sport_show_id"
     t.index ["category_id"], name: "index_troops_on_category_id"
+    t.index ["sport_show_id"], name: "index_troops_on_sport_show_id"
   end
 
   add_foreign_key "date_shows", "sport_shows"
   add_foreign_key "troops", "categories"
+  add_foreign_key "troops", "sport_shows"
 end

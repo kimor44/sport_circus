@@ -1,4 +1,5 @@
 class Troop < ApplicationRecord
-  validates :category, presence: true
+  validates :name, :description, :picture, :slug, :category_id, :sport_show_id, presence: true
   belongs_to :category
+  belongs_to :sport_show
 end
