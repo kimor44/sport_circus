@@ -4,7 +4,7 @@ class TroopsController < ApplicationController
   # GET /troops
   # GET /troops.json
   def index
-    @troops = Troop.all
+    @troops = Troop.includes(:category).all
   end
 
   # GET /troops/1
@@ -15,10 +15,12 @@ class TroopsController < ApplicationController
   # GET /troops/new
   def new
     @troop = Troop.new
+    @categories = Category.all
   end
 
   # GET /troops/1/edit
   def edit
+    @categories = Category.all
   end
 
   # POST /troops
@@ -69,6 +71,6 @@ class TroopsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def troop_params
-      params.require(:troop).permit(:name, :picture, :description, :slug)
+      params.require(:troop).permit(:name, :picture, :description, :slug, :category_id)
     end
 end
