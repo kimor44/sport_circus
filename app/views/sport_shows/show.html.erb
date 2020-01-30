@@ -5,4 +5,5 @@
 
 <p>
   <%= @sportShow.description %>
+  <%= link_to 'supprimer', sport_show_path, method: :delete, data: {confirm: 'Etes-vous sûr ?'} %>
 </p>

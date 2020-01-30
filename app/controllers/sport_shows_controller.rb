@@ -5,7 +5,6 @@ class SportShowsController < ApplicationController
     @sportShow = SportShow.all
   end
 
-  # @return [SportShow]
   def show
   end
 
@@ -14,7 +13,7 @@ class SportShowsController < ApplicationController
 
   def update
     if @sportShow.update(sport_show_params)
-      redirect_to sport_show_url, notice: 'Le show a bien été modifié'
+      redirect_to sport_shows_index_url, notice: 'Le show a bien été modifié'
     else
       render :edit
     end
@@ -25,9 +24,9 @@ class SportShowsController < ApplicationController
   end
 
   def create
-    @sportShow = SportShow.new()
+    @sportShow = SportShow.new
     if @sportShow.update(sport_show_params)
-      redirect_to sport_show_url, notice: 'Le show a bien été ajouté'
+      redirect_to sport_shows_index_url, notice: 'Le show a bien été ajouté'
     else
       render :new
     end
@@ -35,7 +34,7 @@ class SportShowsController < ApplicationController
 
   def destroy
     @sportShow.destroy
-    redirect_to sport_show_url, notice: 'Le show a bien été supprimé'
+    redirect_to sport_shows_index_url, notice: 'Le show a bien été supprimé'
   end
 
   private
@@ -45,6 +44,6 @@ class SportShowsController < ApplicationController
   end
 
   def sport_show_params
-    params.require(:sportShow).permit(:name, :location, :picture, :description, :slug)
+    params.require(:sport_show).permit(:name, :location, :picture, :description, :slug)
   end
 end
