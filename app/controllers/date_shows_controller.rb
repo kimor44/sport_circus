@@ -15,6 +15,7 @@ class DateShowsController < ApplicationController
   # GET /date_shows/new
   def new
     @date_show = DateShow.new
+    @sport_shows = SportShow.all
   end
 
   # GET /date_shows/1/edit

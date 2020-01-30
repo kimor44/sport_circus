@@ -2,8 +2,27 @@
   <%= link_to 'Revenir aux shows', SportShow %>
 </p>
 <h1>Show <%= @sportShow.name %></h1>
-
 <p>
   <%= @sportShow.description %>
   <%= link_to 'supprimer', sport_show_path, method: :delete, data: {confirm: 'Etes-vous sûr ?'} %>
 </p>
+
+<p>
+  <%= @sportShow.location %>
+</p>
+<p>
+  <%= @sportShow.slug %>
+</p>
+<p>
+  <img src="<%= @sportShow.picture %>" alt="">
+</p>
+<p>
+  <%= @sportShow.slug %>
+</p>
+<ul>
+  <%= @date_shows.each do |bla| %>
+    <li>
+    <%= bla.date %>
+    </li>
+  <% end %>
+</ul>
