@@ -7,6 +7,7 @@ class SportShowsController < ApplicationController
 
   def show
     @date_shows = DateShow.where("sport_show_id" => @sportShow)
+    @three_last_troops = Troop.where("sport_show_id" => @sportShow)
   end
 
   def edit

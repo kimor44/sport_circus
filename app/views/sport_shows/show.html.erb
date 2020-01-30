@@ -1,28 +1,40 @@
-<p>
-  <%= link_to 'Revenir aux shows', SportShow %>
-</p>
-<h1>Show <%= @sportShow.name %></h1>
-<p>
-  <%= @sportShow.description %>
-  <%= link_to 'supprimer', sport_show_path, method: :delete, data: {confirm: 'Etes-vous sûr ?'} %>
-</p>
+<div class="container">
 
-<p>
-  <%= @sportShow.location %>
-</p>
-<p>
-  <%= @sportShow.slug %>
-</p>
-<p>
-  <img src="<%= @sportShow.picture %>" alt="">
-</p>
-<p>
-  <%= @sportShow.slug %>
-</p>
-<ul>
-  <%= @date_shows.each do |bla| %>
+  <p>
+    <%= link_to 'Revenir aux shows', SportShow %>
+  </p>
+  <h1>Show <%= @sportShow.name %></h1>
+  <p>
+    <%= @sportShow.description %>
+    <%= link_to 'supprimer', sport_show_path, method: :delete, data: {confirm: 'Etes-vous sûr ?'} %>
+  </p>
+
+  <p>
+    <%= @sportShow.location %>
+  </p>
+  <p>
+    <%= @sportShow.slug %>
+  </p>
+  <p>
+    <img src="<%= @sportShow.picture %>" alt="">
+  </p>
+  <p>
+    <%= @sportShow.slug %>
+  </p>
+  <h3>dates :</h3>
+  <ul>
+    <%= @date_shows.each do |date_show| %>
+      <li>
+      <%= date_show.date %>
+      </li>
+    <% end %>
+  </ul>
+  <h3>Artistes :</h3>
+  <ul>
+    <%= @three_last_troops.each do |troop| %>
     <li>
-    <%= bla.date %>
+      <%= troop.name %>
     </li>
-  <% end %>
-</ul>
+    <% end %>
+  </ul>
+</div>
