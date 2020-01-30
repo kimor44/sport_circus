@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'sport_shows/index'
   get 'admin/index'
+  resources :sport_shows
   get '/admin/sport_shows', to: 'sport_shows#index'
   namespace :admin do
     root "admin#index"

@@ -1,0 +1,10 @@
+<h1>Edit the show</h1>
+<%= form_for @sportShow do |form| %>
+  <%= form.text_field :name %>
+  <%= form.text_field :location %>
+  <%= form.text_field :picture %>
+  <%= form.text_area :description %>
+  <%= form.text_field :slug %>
+  <%= form.submit 'Modifier' %>
+<% end %>
+<%= render 'form', sport_show: @sportshow %>

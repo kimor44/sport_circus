@@ -24,6 +24,8 @@ gem 'sassc-rails', '>= 2.1.0'
 gem 'jquery-rails'
 # Formulaire with bootstrap
 gem 'simple_form', '~> 5.0', '>= 5.0.1'
+# Icones font-awesome
+gem 'font-awesome-rails', '~> 4.6', '>= 4.6.3.1'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
