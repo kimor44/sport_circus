@@ -20,6 +20,7 @@ class DateShowsController < ApplicationController
   # GET /date_shows/1/edit
   def edit
     @date_shows = DateShow.all
+    @sport_shows = SportShow.all
   end
 
   # POST /date_shows
