@@ -1,0 +1,8 @@
+<%= simple_form_for @sportShow do |form| %>
+  <%= form.input :name %>
+  <%= form.input :location %>
+  <%= form.input :picture %>
+  <%= form.input :description %>
+  <%= form.input :slug %>
+  <%= form.button :submit, @sportShow.new_record? ? 'Créer' : 'Modifier' %>
+<% end %>

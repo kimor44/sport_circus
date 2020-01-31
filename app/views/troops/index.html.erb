@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+<p>
+  <%= link_to 'sport shows', sport_shows_index_url %>
+</p>
+<p>
+  <%= link_to 'date shows', date_shows_url %>
+</p>
+<p>
+  <%= link_to 'categories', categories_url %>
+</p>
+  <h1>Troops</h1>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Catégorie</th>
+        <th scope="col">Show</th>
+        <th scope="col">Picture</th>
+        <th scope="col">Description</th>
+        <th scope="col">Slug</th>
+        <th scope="col" colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @troops.each do |troop| %>
+        <tr>
+          <td scope="row"><%= troop.name %></td>
+          <td><%= troop.category.name %></td>
+          <td><%= troop.sport_show.name %></td>
+          <td><%= troop.picture %></td>
+          <td><%= troop.description %></td>
+          <td><%= troop.slug %></td>
+          <td><%= link_to 'Show', troop %></td>
+          <td><%= link_to 'Edit', edit_troop_path(troop) %></td>
+          <td><%= link_to 'Destroy', troop, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'New Troop', new_troop_path %>
+</div>

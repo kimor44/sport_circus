@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="MySQL - sport_circus_development@localhost" uuid="71388e6a-a77c-4b8a-9a40-f2cb629fb56b">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/sport_circus_development</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="sport_circus_test@localhost" uuid="e9595dc3-ed42-43c6-83f8-ca7dd962d1a5">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/sport_circus_test</jdbc-url>
+    </data-source>
+  </component>
+</project>
