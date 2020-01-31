@@ -1,5 +1,10 @@
 # Sport Circus
-
+Clone this project  
+`https://github.com/kimor44/sport_circus.git`  
+Run `rake db:create`  
+Run `rails generate simple_form:install --bootstrap`  
+Run `gem install font-awesome-rails -v 4.6.3.1`  
+Run `bundle install`  
 This README would normally document whatever steps are necessary to get the
 application up and running.
 

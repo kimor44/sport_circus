@@ -1,0 +1,40 @@
+<div class="container">
+  <p>
+    <%= link_to 'sport shows', sport_shows_index_url %>
+  </p>
+  <p>
+    <%= link_to 'date shows', date_shows_url %>
+  </p>
+  <p>
+  <%= link_to 'troops', troops_url %>
+</p>
+  <p id="notice"><%= notice %></p>
+
+  <h1>Categories</h1>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Slug</th>
+        <th scope="col" colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+    <% @categories.each do |category| %>
+      <tr>
+        <td scope="row"><%= category.name %></td>
+        <td><%= category.slug %></td>
+        <td><%= link_to 'Show', category %></td>
+        <td><%= link_to 'Edit', edit_category_path(category) %></td>
+        <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'New Category', new_category_path %>
+</div>
